@@ -1,0 +1,131 @@
+/* Variables */
+:root {
+  --font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --grey-1: #F8F9FA;
+  --blue-1: #EFF8FF;
+  --blue-2: #AAD4F5;
+  --blue-3: #63A2D8;
+  --blue-4: #3183c8;
+  --blue-5: #2368A2;
+  --blue-6: #1A4971;
+  --blue-7: #203D54;
+  --box-shadow-input: 0 1px 1px 0 #F8F9FA, 0 1px 3px 1px #F8F9FA;
+}
+
+/* HTML Elements */
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.top-page-strip {
+  height: 8px;
+  background-color: var(--blue-5);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10%;
+  height: 80px;
+  box-shadow: var(--box-shadow-input);
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.brand {
+  font-weight: 300;
+}
+
+/* Coming Soon Section */
+#coming-soon {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#coming-soon .wrapper {
+  margin-bottom: 2rem;
+}
+
+#coming-soon .wrapper h1 {
+  font-size: 3rem;
+}
+
+#coming-soon img {
+  max-width: 100%;
+  width: 480px;
+  height: auto;
+}
+
+/* CTA Section */
+#cta {
+  width: 100%;
+  height: 120px;
+  padding: 0 5%;
+}
+
+#cta .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem auto;
+  max-width: 56rem;
+}
+
+.cta-form input {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  color: var(--blue-6);
+  border: none;
+  /* box-shadow: var(--box-shadow-input); */
+}
+
+.cta-form input::placeholder {
+  color: var(--blue-4);
+}
+
+.cta-form input[type="email"] {
+  background: var(--grey-1);
+  width: 100%;
+  border-left: 1px solid var(--blue-4);
+  border-top: 1px solid var(--blue-4);
+  border-bottom: 1px solid var(--blue-4);
+  border-radius: 4px 0 0 4px;
+}
+
+.cta-form input[type="submit"] {
+  background: var(--blue-1);
+  border: 1px solid var(--blue-4);
+  border-radius: 0 4px 4px 0;
+}
+
+@media screen and (min-width: 500px) {
+  #cta {
+    padding: 0;
+  }
+
+  .cta-form input[type="email"] {
+    width: 30rem;
+  }
+}
